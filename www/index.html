@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <!--
+        Customize this policy to fit your own app's needs. For more guidance, see:
+            https://github.com/apache/cordova-plugin-whitelist/blob/master/README.md#content-security-policy
+        Some notes:
+            * gap: is required only on iOS (when using UIWebView) and is needed for JS->native communication
+            * https://ssl.gstatic.com is required only on Android and is needed for TalkBack to function properly
+            * Disables use of inline scripts in order to mitigate risk of XSS vulnerabilities. To change this:
+                * Enable inline JS: add 'unsafe-inline' to default-src
+        -->
+        <script src="plugins/jquery/jquery-1.9.1.js"></script>
+        <meta name="format-detection" content="telephone=no">
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width">
+        <title>Display Wertco Simulator</title>
+    </head>
+    <body style="background-color: black;">
+        <div class="app" style="overflow: hidden;width: 1270px;height: 780px;" onclick="javascript:troca_fundo();">
+            <img src="img/telas/base_nova.png" style="width: 1420px;margin-top:-10px;margin-left:-75px;margin-top: -40px;" id="base" name="base">
+            
+            <img src="img/telas/8_grande.png" id="total_0" style="width:100px;height:218px;position:absolute;left:970px;top:65px;">
+            <img src="img/telas/8_grande.png" id="total_1" style="width:100px;height:218px;position:absolute;left:846px;top:65px;">
+            <img src="img/telas/ponto_grande.png" id="total_ponto" style="width:38px;height:60px;position:absolute;left:811px;top:243px;">
+            <img src="img/telas/8_grande.png" id="total_2" style="width:100px;height:218px;position:absolute;left:718px;top:65px;">
+            <img src="img/telas/8_grande.png" id="total_3" style="width:100px;height:218px;position:absolute;left:597px;top:65px;">
+            <img src="img/telas/8_grande.png" id="total_4" style="width:100px;height:218px;position:absolute;left:472px;top:65px;">
+            <img src="img/telas/8_grande.png" id="total_5" style="width:100px;height:218px;position:absolute;left:347px;top:65px;">
+            <img src="img/telas/8_grande.png" id="total_6" style="width:100px;height:218px;position:absolute;left:221px;top:65px;">
+            
+            <img src="img/telas/8_medio.png" id="volume_0" style="width:85px;height:147px;position:absolute;left:980px;top:315px;">
+            <img src="img/telas/8_medio.png" id="volume_1" style="width:85px;height:147px;position:absolute;left:862px;top:315px;">
+            <img src="img/telas/8_medio.png" id="volume_2" style="width:85px;height:147px;position:absolute;left:744px;top:315px;">
+            <img src="img/telas/ponto_medio.png" id="volume_ponto" style="width:42px;height:50px;position:absolute;left:705px;top:430px;">
+            <img src="img/telas/8_medio.png" id="volume_3" style="width:85px;height:147px;position:absolute;left:627px;top:315px;">
+            <img src="img/telas/8_medio.png" id="volume_4" style="width:85px;height:147px;position:absolute;left:510px;top:315px;">
+            <img src="img/telas/8_medio.png" id="volume_5" style="width:85px;height:147px;position:absolute;left:392px;top:315px;">
+            
+            <img src="img/telas/escudo.png" id="escudo" style="width:50px;height:50px;position:absolute;left:215px;top:322px;display:none;">
+            
+            <img src="img/telas/informacoes.png" id="informacoes" style="width:180px;height:180px;position:absolute;left:213px;top:300px;">
+            
+            <img src="img/telas/8_pequeno.png" id="preco_0" style="width:50px;height:93px;position:absolute;left:765px;top:638px;">
+            <img src="img/telas/8_pequeno.png" id="preco_1" style="width:50px;height:93px;position:absolute;left:698px;top:638px;">
+            <img src="img/telas/8_pequeno.png" id="preco_2" style="width:50px;height:93px;position:absolute;left:630px;top:638px;">
+            <img src="img/telas/ponto_pequeno.png" id="preco_ponto" style="width:20px;height:25px;position:absolute;left:608px;top:715px;">
+            <img src="img/telas/8_pequeno.png" id="preco_3" style="width:50px;height:93px;position:absolute;left:562px;top:638px;">
+            <img src="img/telas/8_pequeno.png" id="preco_4" style="width:50px;height:93px;position:absolute;left:493px;top:638px;">
+            <img src="img/telas/setinha.png" id="preco_seta" style="width:60px;height:85px;position:absolute;left:445px;top:641px;">
+            
+            <img src="img/telas/8_pequeno.png" id="preco_0_d" style="width:50px;height:93px;position:absolute;left:1235px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_1_d" style="width:50px;height:93px;position:absolute;left:1167px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_2_d" style="width:50px;height:93px;position:absolute;left:1099px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_3_d" style="width:50px;height:93px;position:absolute;left:1032px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_4_d" style="width:50px;height:93px;position:absolute;left:965px;top:640px;">
+            
+            <img src="img/telas/8_pequeno.png" id="preco_0_l" style="width:50px;height:93px;position:absolute;left:297px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_1_l" style="width:50px;height:93px;position:absolute;left:229px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_2_l" style="width:50px;height:93px;position:absolute;left:161px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_3_l" style="width:50px;height:93px;position:absolute;left:93px;top:640px;">
+            <img src="img/telas/8_pequeno.png" id="preco_4_l" style="width:50px;height:93px;position:absolute;left:25px;top:640px;">
+            <!--<img src="img/telas/8_pequeno.png" id="preco_4" style="width:50px;height:93px;position:absolute;left:493px;top:638px;">-->
+            
+            <img src="img/telas/traco.png" id="preco_0_traco_l" style="width:50px;height:93px;position:absolute;left:297px;top:639px;display:none;">
+            <img src="img/telas/traco.png" id="preco_1_traco_l" style="width:50px;height:93px;position:absolute;left:229px;top:639px;display:none;">
+            <img src="img/telas/traco.png" id="preco_2_traco_l" style="width:50px;height:93px;position:absolute;left:161px;top:639px;display:none;">
+            <img src="img/telas/traco.png" id="preco_3_traco_l" style="width:50px;height:93px;position:absolute;left:93px;top:639px;display:none;">
+            <img src="img/telas/traco.png" id="preco_4_traco_l" style="width:50px;height:93px;position:absolute;left:25px;top:639px;display:none;">
+            
+            <img src="img/telas/traco.png" id="preco_0_traco_d" style="width:50px;height:93px;position:absolute;left:1235px;top:639px;display:none">
+            <img src="img/telas/traco.png" id="preco_1_traco_d" style="width:50px;height:93px;position:absolute;left:1167px;top:639px;display:none;">
+            <img src="img/telas/traco.png" id="preco_2_traco_d" style="width:50px;height:93px;position:absolute;left:1099px;top:639px;display:none;">
+            <img src="img/telas/traco.png" id="preco_3_traco_d" style="width:50px;height:93px;position:absolute;left:1032px;top:639px;display:none;">
+            <img src="img/telas/traco.png" id="preco_4_traco_d" style="width:50px;height:93px;position:absolute;left:965px;top:639px;display:none;">
+            
+        </div>
+        <script>
+            var count = 0;
+            var my_count = 0;
+            var preco = 3789;
+            var volume = 0;
+            var total = 0;
+            var amostra = 0;
+            var acc=0;
+            var fator = 9766;
+            var lenght_volume = 0;
+            var lenght_total = 0;
+            var Mono = false;
+            var f2;
+            
+            var volume_str = "";
+            var total_str = "";
+            var preco_str = ("3789").split('').reverse().join('');
+            
+            
+            //$('#preco_4').attr('src',"img/telas/"+preco.charAt(4)+"_medio.png");
+             
+             
+            function pisca_8()
+            {
+                if (my_count < 4)
+                {
+                    setTimeout(function(){
+                        setTimeout(function(){
+                            my_count++; 
+                            for (var count = 0; count < 7; count++) {
+                                $('#total_'+count).attr('src',"img/telas/retangulo_grande.png");
+                                $('#preco_'+count).attr('src',"img/telas/retangulo_pequeno.png");
+                                $('#preco_'+count+"_d").attr('src',"img/telas/retangulo_pequeno.png");
+                                $('#preco_'+count+"_l").attr('src',"img/telas/retangulo_pequeno.png");
+                                if (count < 6) $('#volume_'+count).attr('src',"img/telas/retangulo_medio.png");
+                                if (count < 5)
+                                {
+                                    $('#preco_'+count+'_traco_d').hide();
+                                    $('#preco_'+count+'_traco_l').hide();
+                                }
+                            }
+                            $('#preco_seta').hide();
+                            $('#informacoes').hide();
+                            $('#total_ponto').hide();
+                            $('#volume_ponto').hide();
+                            $('#preco_ponto').hide();
+                            pisca_8();
+                            my_count++;
+                        },900);
+                        
+                        for (var count = 0; count < 7; count++)
+                        {    
+                            $('#total_'+count).attr('src',"img/telas/8_grande.png");
+                            if (count < 6)
+                            {
+                                $('#volume_'+count).attr('src',"img/telas/8_medio.png");
+                                $('#preco_'+count).attr('src',"img/telas/8_pequeno.png");
+                                if (!Mono)
+                                {
+                                    $('#preco_'+count+"_d").attr('src',"img/telas/8_pequeno.png");
+                                    $('#preco_'+count+"_l").attr('src',"img/telas/8_pequeno.png");
+                                }
+                            }
+                        }
+                        
+                        $('#escudo').hide();
+                        
+                        $('#preco_seta').show();
+                        $('#informacoes').show();
+                        $('#total_ponto').show();
+                        $('#volume_ponto').show();
+                        $('#preco_ponto').show();
+                    },500);
+                }
+                else
+                {
+                    setTimeout(function(){
+                        prepara_venda();
+                    },400);
+                }
+            }
+            
+            pisca_8();
+            
+            function prepara_venda(){
+                $('#total_ponto').show();
+                $('#volume_ponto').show();
+                $('#preco_ponto').show();
+                $('#preco_seta').show();
+                if (!Mono)
+                {
+                    for (var count = 0; count < 5; count++)
+                    {
+                        $('#preco_'+count+'_traco_d').show();
+                        $('#preco_'+count+'_traco_l').show();
+                    }
+                }
+                for (var count = 0; count < 4; count++)  $('#volume_'+count).attr('src',"img/telas/0_medio.png");
+                for (var count = 0; count < 3; count++)  $('#total_'+count).attr('src',"img/telas/0_grande.png");
+                $('#preco_0').attr('src',"img/telas/"+preco_str.charAt(0)+"_medio.png");
+                $('#preco_1').attr('src',"img/telas/"+preco_str.charAt(1)+"_medio.png");
+                $('#preco_2').attr('src',"img/telas/"+preco_str.charAt(2)+"_medio.png");
+                $('#preco_3').attr('src',"img/telas/"+preco_str.charAt(3)+"_medio.png");
+                setTimeout(function(){
+                    roda_venda();
+                }, 3000);
+            }
+            
+            function valida_venda(){
+                setTimeout(function(){
+                    $('#escudo').show();
+                    setTimeout(function(){
+                        pisca_8();
+                    }, 1000);
+                }, 1000);
+            }
+            
+            function roda_venda()
+            {
+                timer_venda = setInterval(function(){
+                    if (my_count > 5)
+                    {
+                        if (amostra++ >= 1)
+                        {
+                            volume = (acc*fator);
+
+                            //console.log(volume);
+                            volume = parseInt(volume/10000);
+
+                            total = volume*preco;
+                            total = parseInt(total/10000);
+
+                            volume_str = volume.toString();
+                            lenght_volume = volume_str.length-1;
+
+                            total_str = total.toString();
+                            lenght_total = total_str.length-1;
+
+                            //console.log(volume_str);
+
+                            for (var count = 0; count < 7; count++)
+                            {
+                                if (total_str.charAt(lenght_total-count) !== "") $('#total_'+count).attr('src',"img/telas/"+total_str.charAt(lenght_total-count)+"_grande.png");
+                                else if (count > 2) $('#total_'+count).attr('src',"img/telas/retangulo_grande.png");
+                                else $('#total_'+count).attr('src',"img/telas/0_grande.png");
+                                if (count < 6)
+                                {
+                                    if (volume_str.charAt(lenght_volume-count) !== "") $('#volume_'+count).attr('src',"img/telas/"+volume_str.charAt(lenght_volume-count)+"_medio.png");
+                                    else if (count > 3) $('#volume_'+count).attr('src',"img/telas/retangulo_medio.png");
+                                    else $('#volume_'+count).attr('src',"img/telas/0_medio.png");
+                                }
+                            }
+                            amostra=0;
+                            //clearInterval(f);
+                        }
+                        else
+                        {
+                            if(volume != 7804) acc += 8;
+                            else
+                            {
+                                clearInterval(timer_venda);
+                                my_count = 0;
+                                acc = 0;
+                                valida_venda();
+                            }
+                        }
+                    }
+                }, 15);
+            }
+            
+            function troca_fundo(){  
+                if ($('#base').attr('src') != 'img/telas/base_nova_mono.png')
+                {
+                    $('#base').attr('src','img/telas/base_nova_mono.png');
+                    Mono = true;
+                    for (var count = 0; count < 5; count++)
+                    {
+                        $('#preco_'+count+'_traco_d').hide();
+                        $('#preco_'+count+'_traco_l').hide();
+                    }
+                }
+                else
+                {
+                    $('#base').attr('src','img/telas/base_nova.png');
+                    Mono = false;
+                    for (var count = 0; count < 5; count++)
+                    {
+                        $('#preco_'+count+'_traco_d').show();
+                        $('#preco_'+count+'_traco_l').show();
+                    }
+                }
+            }
+            
+        </script>
+    </body>
+    
+</html>

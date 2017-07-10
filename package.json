@@ -1,0 +1,24 @@
+{
+    "name": "com.coolappz.simulador_display_wertco",
+    "displayName": "Simulador_Display_Wertco",
+    "version": "1.0.0",
+    "description": "A sample Apache Cordova application that responds to the deviceready event.",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "Apache Cordova Team",
+    "license": "Apache-2.0",
+    "dependencies": {
+        "cordova-android": "^6.2.3",
+        "cordova-plugin-splashscreen": "git://git.apache.org/cordova-plugin-splashscreen.git"
+    },
+    "cordova": {
+        "plugins": {
+            "cordova-plugin-splashscreen": {}
+        },
+        "platforms": [
+            "android"
+        ]
+    }
+}
