@@ -103,6 +103,7 @@
             var fator = 9766;
             var lenght_volume = 0;
             var lenght_total = 0;
+            var option = 0;
             var Mono = false;
             var f2;
             
@@ -263,26 +264,45 @@
                 }, 15);
             }
             
-            function troca_fundo(){  
-                if ($('#base').attr('src') != 'img/telas/base_nova_mono.png')
+            function fundo_placa(){
+                $('#base').attr('src','img/telas/base.jpg');
+                Mono = false;
+                for (var count = 0; count < 5; count++)
                 {
-                    $('#base').attr('src','img/telas/base_nova_mono.png');
-                    Mono = true;
-                    for (var count = 0; count < 5; count++)
-                    {
-                        $('#preco_'+count+'_traco_d').hide();
-                        $('#preco_'+count+'_traco_l').hide();
-                    }
+                    $('#preco_'+count+'_traco_d').show();
+                    $('#preco_'+count+'_traco_l').show();
                 }
-                else
+            }
+            
+            function fundo_preto(){
+                $('#base').attr('src','img/telas/base_nova_mono.png');
+                Mono = true;
+                for (var count = 0; count < 5; count++)
                 {
-                    $('#base').attr('src','img/telas/base_nova.png');
-                    Mono = false;
-                    for (var count = 0; count < 5; count++)
-                    {
-                        $('#preco_'+count+'_traco_d').show();
-                        $('#preco_'+count+'_traco_l').show();
-                    }
+                    $('#preco_'+count+'_traco_d').hide();
+                    $('#preco_'+count+'_traco_l').hide();
+                }
+            }
+            
+            function fundo_preto_preco(){
+                $('#base').attr('src','img/telas/base_nova.png');
+                Mono = false;
+                for (var count = 0; count < 5; count++)
+                {
+                    $('#preco_'+count+'_traco_d').show();
+                    $('#preco_'+count+'_traco_l').show();
+                }
+            }
+            
+            function troca_fundo(){  
+                option++;
+                 
+                if (option == 1) fundo_preto_preco();
+                else if (option == 2) fundo_placa();
+                else if (option == 3) fundo_preto();
+                else{
+                    option = 0;
+                    troca_fundo();
                 }
             }
             
