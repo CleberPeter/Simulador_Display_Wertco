@@ -264,34 +264,54 @@
                 }, 15);
             }
             
-            function fundo_placa(){
-                $('#base').attr('src','img/telas/base.jpg');
-                Mono = false;
-                for (var count = 0; count < 5; count++)
+            function Mono_On(){
+                Mono = true;
+                
+                for (var count = 0; count < 7; count++)
                 {
-                    $('#preco_'+count+'_traco_d').show();
-                    $('#preco_'+count+'_traco_l').show();
+                    $('#preco_'+count+"_d").hide();
+                    $('#preco_'+count+"_l").hide();
+                    if (count < 5)
+                    {
+                        $('#preco_'+count+'_traco_d').hide();
+                    $('#preco_'+count+'_traco_l').hide();
+                    }
                 }
+            }
+            
+            function Mono_Off(){
+                Mono = false;
+                
+                for (var count = 0; count < 7; count++)
+                {
+                    $('#preco_'+count+"_d").show();
+                    $('#preco_'+count+"_l").show();
+                    if (count < 5)
+                    {
+                        $('#preco_'+count+'_traco_d').show();
+                    $('#preco_'+count+'_traco_l').show();
+                    }
+                }
+            }
+            
+            function fundo_placa_preco(){
+                $('#base').attr('src','img/telas/base.jpg');
+                Mono_Off();
+            }
+            
+            function fundo_placa(){
+                $('#base').attr('src','img/telas/base_mono.png');
+                Mono_On();
             }
             
             function fundo_preto(){
                 $('#base').attr('src','img/telas/base_nova_mono.png');
-                Mono = true;
-                for (var count = 0; count < 5; count++)
-                {
-                    $('#preco_'+count+'_traco_d').hide();
-                    $('#preco_'+count+'_traco_l').hide();
-                }
+                Mono_On();
             }
             
             function fundo_preto_preco(){
                 $('#base').attr('src','img/telas/base_nova.png');
-                Mono = false;
-                for (var count = 0; count < 5; count++)
-                {
-                    $('#preco_'+count+'_traco_d').show();
-                    $('#preco_'+count+'_traco_l').show();
-                }
+                Mono_Off();
             }
             
             function troca_fundo(){  
@@ -299,7 +319,8 @@
                  
                 if (option == 1) fundo_preto_preco();
                 else if (option == 2) fundo_placa();
-                else if (option == 3) fundo_preto();
+                else if (option == 3) fundo_placa_preco();
+                else if (option == 4) fundo_preto();
                 else{
                     option = 0;
                     troca_fundo();
