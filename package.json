@@ -11,11 +11,13 @@
     "license": "Apache-2.0",
     "dependencies": {
         "cordova-android": "^6.2.3",
+        "cordova-plugin-insomnia": "git+https://github.com/EddyVerbruggen/Insomnia-PhoneGap-Plugin.git",
         "cordova-plugin-splashscreen": "git://git.apache.org/cordova-plugin-splashscreen.git"
     },
     "cordova": {
         "plugins": {
-            "cordova-plugin-splashscreen": {}
+            "cordova-plugin-splashscreen": {},
+            "cordova-plugin-insomnia": {}
         },
         "platforms": [
             "android"

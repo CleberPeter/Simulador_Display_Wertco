@@ -11,6 +11,10 @@
                         {
                             "xml": "<feature name=\"SplashScreen\"><param name=\"android-package\" value=\"org.apache.cordova.splashscreen.SplashScreen\" /><param name=\"onload\" value=\"true\" /></feature>",
                             "count": 1
+                        },
+                        {
+                            "xml": "<feature name=\"Insomnia\"><param name=\"android-package\" value=\"nl.xservices.plugins.Insomnia\" /></feature>",
+                            "count": 1
                         }
                     ]
                 }
@@ -19,6 +23,9 @@
     },
     "installed_plugins": {
         "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.coolappz.SimuladorDisplayWertco"
+        },
+        "cordova-plugin-insomnia": {
             "PACKAGE_NAME": "com.coolappz.SimuladorDisplayWertco"
         }
     },
@@ -31,9 +38,18 @@
             "clobbers": [
                 "navigator.splashscreen"
             ]
+        },
+        {
+            "id": "cordova-plugin-insomnia.Insomnia",
+            "file": "plugins/cordova-plugin-insomnia/www/Insomnia.js",
+            "pluginId": "cordova-plugin-insomnia",
+            "clobbers": [
+                "window.plugins.insomnia"
+            ]
         }
     ],
     "plugin_metadata": {
-        "cordova-plugin-splashscreen": "4.0.4-dev"
+        "cordova-plugin-splashscreen": "4.0.4-dev",
+        "cordova-plugin-insomnia": "4.3.0"
     }
 }

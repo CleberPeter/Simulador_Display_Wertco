@@ -9,6 +9,9 @@
     "installed_plugins": {
         "cordova-plugin-splashscreen": {
             "PACKAGE_NAME": "com.coolappz.SimuladorDisplayWertco"
+        },
+        "cordova-plugin-insomnia": {
+            "PACKAGE_NAME": "com.coolappz.SimuladorDisplayWertco"
         }
     },
     "dependent_plugins": {}
